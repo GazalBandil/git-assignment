@@ -1,7 +1,7 @@
 ﻿The summary of the assignment
 
 
- assignment od git -01
+ assignment of git -01
 
  Objective: The goal of this assignment is to help you get familiar with basic Git commands and workflows, which are commonly used in real-world software development.
 
