@@ -5,16 +5,25 @@
 
  Objective: The goal of this assignment is to help you get familiar with basic Git commands and workflows, which are commonly used in real-world software development.
 
-#Create a New Repository.
-#Create a New File
-#Create a Branch
-#Make Changes in the New Branch
-#Create Another Branch (Optional)
-Merge Branches
-Pull Changes from Remote
-View Git Log and History
-Git Status and Staging
-Revert and Reset  
+**Create a New Repository**
+
+**Create a New File**
+
+**Create a Branch**
+
+**Make Changes in the New Branch**
+
+**Create Another Branch (Optional)**
+
+**Merge Branches**
+
+**Pull Changes from Remote**
+
+**View Git Log and History**
+
+**Git Status and Staging**
+
+**Revert and Reset**  
 
 
 
