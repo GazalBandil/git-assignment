@@ -62,7 +62,7 @@ function rollDice() {
         let roll = Math.floor(Math.random() * 6) + 1;
 
         // Change the dice icon
-        dice.className = `fas ${diceIcons[roll]} fa-6x`;
+        dice.className = `fas ${diceIcons[roll]} fa-5x`;
 
         if (roll === 1) {
             currentScores[currentPlayer] = 0;
@@ -124,7 +124,7 @@ function resetGame() {
     winnerText.textContent = ""; // Clear winner text
     enableButtons(); // Re-enable buttons
     updateScores(); // Update UI
-    dice.className = "fas fa-dice-one fa-6x"; // Reset dice icon
+    dice.className = "fas fa-dice-one fa-5x"; // Reset dice icon
 
     // Hide popups if they are visible
     document.getElementById("winnerPopup").classList.remove("show");
