@@ -1,0 +1,396 @@
+/* styles.css */
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.game-container {
+    width: 80%;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.players {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.player {
+    padding: 20px;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: 0.3s;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.player.active {
+    background-color: #f39c12;
+    color: white;
+    transform: scale(1.1);
+    border-style:inset;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.7); 
+     transition: all 0.3s ease-in-out;
+}
+
+
+
+#name1 {
+    border: 2px solid #9abfff;  
+    border-radius: 10px;     
+    padding: 4px 8px;     
+    font-size: 16px;        
+    outline: none;           
+}
+
+#name2 {
+    border: 2px solid #9abfff;  
+    border-radius: 10px;     
+    padding: 4px 8px;    
+    font-size: 16px;        
+    outline: none;        
+}
+
+.player:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-5px);
+}
+
+.player::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    transition: 0.3s;
+    z-index: 0;
+}
+
+.player:hover::before {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.player h2 {
+    position: relative;
+    z-index: 1;
+    font-size: 24px;
+    margin: 0;
+}
+
+
+.controls button {
+    padding: 12px 24px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 8px;
+    background: #27ae60;
+    color: white;
+    transition: 0.3s;
+}
+
+.controls button:hover {
+    background: #2ecc71;
+    transform: scale(1.1);
+}
+
+.controls button:disabled {
+    background: gray;
+    cursor: not-allowed;
+}
+
+#winner {
+    font-size: 26px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #f1c40f;
+}
+
+.rolling {
+    animation: spin 0.5s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* statrt and timer */
+#timer {
+    font-size: 20px;
+    font-weight: bold;
+    color: #f39c12; /* Yellow */
+}
+
+#startTimerBtn {
+    background-color: #27ae60;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+#startTimerBtn:hover {
+    background-color: #219150;
+}
+
+
+
+
+
+
+/* Popup Modal Styles */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s ease-in-out;
+    z-index: 9999;
+}
+
+.popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.popup h2 {
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.popup button {
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    background: #27ae60;
+    color: white;
+    transition: 0.3s;
+}
+
+.popup button:hover {
+    background: #2ecc71;
+}
+
+/* Help Button */
+#helpBtn {
+    position: fixed;
+    top: 20px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: #dfdfe0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#helpBtn:hover {
+    color: #1c3d52;
+    
+}
+
+
+/* Help Popup */
+.hpopup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(60, 112, 158);
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    text-align: center;
+    width: 300px;
+    border-top: 5px solid rgb(255, 253, 253);
+}
+
+/* Popup Content */
+.popup-content1 {
+    max-width: 100%;
+    color:#dfdfdf
+}
+
+.popup-content1 ul {
+    text-align: left;
+    padding-left: 20px;
+}
+
+/* OK Button */
+#closeHelpBtn {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background: #3add35;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#closeHelpBtn:hover {
+    background: #268431;
+    
+}
+
+/* Show Popup */
+.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Responsive Design
+@media (max-width: 768px) {
+    .game-container {
+        width: 90%;
+        padding: 15px;
+    }
+    h1 {
+        font-size: 24px;
+    }
+    .players {
+        flex-direction: column;
+        align-items: center;
+    }
+    .player {
+        width: 80%;
+        text-align: center;
+    }
+    .controls button {
+        width: 100%;
+        font-size: 16px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .game-container {
+        width: 95%;
+        padding: 10px;
+    }
+    h1 {
+        font-size: 20px;
+    }
+    .player {
+        width: 90%;
+        margin-bottom:30px;
+    }
+    .controls button {
+        font-size: 14px;
+        padding: 8px;
+    }
+} */
+
+/* Responsive Design for Tablets */
+@media (max-width: 768px) {
+    .game-container {
+        width: 90%;
+        padding: 15px;
+    }
+    h1 {
+        font-size: 30px;
+    }
+    .players {
+        flex-direction: column; /* Stack players in a column */
+        align-items: center;
+        
+    }
+
+    #name1{
+        width:80%;
+
+    }
+    
+    #name2{
+        width:80%;
+
+    }
+    #player1{
+        margin-bottom:4%;
+    }
+    .player {
+        width: 150px; /* Adjusted square size */
+        height: 150px;
+    }
+    .controls button {
+        width: 60%; /* Slightly bigger buttons */
+        font-size: 16px;
+        padding: 10px;
+    }
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 480px) {
+    .game-container {
+        width: 95%;
+        padding: 10px;
+    }
+    h1 {
+        font-size: 20px;
+    }
+    .players {
+        flex-direction: column;
+        
+    }
+    #name1{
+        width:80%;
+
+    }
+    
+    #name2{
+        width:80%;
+
+    }
+    #player1{
+        margin-bottom:4%;
+    }
+    .player {
+        width: 50%; /* Keep it square */
+        height: 120px;
+        margin-bottom: 15px; /* Space between squares */
+    }
+    .controls button {
+        width: 70%; /* Increase button width on small screens */
+        font-size: 14px;
+        padding: 8px;
+    }
+}

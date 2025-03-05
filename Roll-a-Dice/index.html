@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Game</title>
+    <link rel="stylesheet" href="index.css"> <!-- Updated to match the CSS filename -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>🎲 Roll & Win</h1>
+        <br></br>
+        <!-- Start Button -->
+        <button id="startTimerBtn">Start</button>
+
+          <!-- Timer Display -->
+       <p>Time: <span id="timer">00:00</span></p>
+
+        <p>Edit the name of Players Before starting the Game</p>
+        <br></br>
+        <button id="helpBtn" class="help-button">
+            Help <i class="fas fa-question-circle"></i>
+        </button>
+        
+        <!-- Help Popup -->
+        <div id="helpPopup" class="hpopup">
+            <div class="popup-content1">
+                <h2>Game Rules</h2>
+                <ul>
+                    <li>Each player takes turns rolling the dice.</li>
+                    <li>If you roll a 1, you lose your current round score.</li>
+                    <li>Click "Hold" to save your score and pass the turn.</li>
+                    <li>The first player to reach 100 points wins!</li>
+                </ul>
+                <button id="closeHelpBtn">OK</button>
+            </div>
+        </div>
+        <div class="players">
+            <div class="player active" id="player1">
+                <h2><input type="text" id="name1" value="Player 1" aria-label="Player 1 Name"></h2>
+                <p>Saved Score: <span id="score1">0</span></p>
+                <p>Current Score: <span id="current1">0</span></p>
+            </div>
+            <div class="player" id="player2">
+                <h2><input type="text" id="name2" value="Player 2" aria-label="Player 2 Name"></h2>
+                <p>Saved Score: <span id="score2">0</span></p>
+                <p>Current Score: <span id="current2">0</span></p>
+            </div>
+        </div>
+        <div class="bottom">
+        <div class="dice-container">
+            <i id="dice" class="fas fa-dice-one fa-6x"></i>
+
+        </div>
+        <div class="controls">
+            <button id="roll" aria-label="Roll the dice">Roll Dice</button>
+            <button id="save" aria-label="Save current score">Save Score</button>
+            <button id="reset" aria-label="Reset the game">Reset Game</button>
+        </div>
+        </div>
+        <p id="winner" aria-live="assertive"></p>
+         <!-- Winner Popup Modal -->
+       <div id="winnerPopup" class="popup">
+          <div class="popup-content">
+             <h2 id="popupMessage"></h2>
+             <button id="playAgain">Play Again</button>
+           </div>
+       </div>
+
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
