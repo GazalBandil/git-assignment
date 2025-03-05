@@ -1,4 +1,4 @@
-/* styles.css */
+
 body {
     font-family: 'Poppins', sans-serif;
     text-align: center;
@@ -128,7 +128,7 @@ h1 {
 }
 
 .current-score {
-    background-color: #e74c3c; /* Different color for Current Score */
+    background-color: #e74c3c; 
     color: white;
 }
 
@@ -327,7 +327,7 @@ h1 {
         font-size: 30px;
     }
     .players {
-        flex-direction: column; /* Stack players in a column */
+        flex-direction: column; 
         align-items: center;
         
         
@@ -356,11 +356,11 @@ h1 {
         margin-bottom:15%;
     }
     .player {
-        width: 150px; /* Adjusted square size */
+        width: 150px; 
         height: 150px;
     }
     .controls button {
-        width: 60%; /* Slightly bigger buttons */
+        width: 60%; 
         font-size: 16px;
         padding: 10px;
     }

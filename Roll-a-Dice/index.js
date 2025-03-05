@@ -177,6 +177,31 @@ document.getElementById("playAgain").addEventListener("click", function() {
 });
 
 
+//name edit functionality
+const name1Input = document.getElementById("name1");
+const name2Input = document.getElementById("name2");
+const startButton = document.getElementById("startTimerBtn");
+const resetButton = document.getElementById("reset");
+
+function disableNameEditing() {
+    name1Input.disabled = true;
+    name2Input.disabled = true;
+}
+
+function enableNameEditing() {
+    name1Input.disabled = false;
+    name2Input.disabled = false;
+}
+
+startButton.addEventListener("click", function () {
+    disableNameEditing(); // Lock names when game starts
+});
+
+resetButton.addEventListener("click", function () {
+    enableNameEditing(); // Allow name changes on reset
+});
+
+
 
 
 // Correctly add event listeners for buttons
