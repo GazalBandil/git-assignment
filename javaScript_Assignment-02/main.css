@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #8bafde, #f0f0f0); 
+    color: #003b73; 
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+/* Main container */
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    max-width: 900px;
+    height: 500px;
+    background: rgba(255, 255, 255, 0.356);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Left Panel - Categories */
+.catergory {
+    width: 30%;
+    background: #002855; 
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+.category-heading h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    padding-top: 10px;
+}
+
+/* Category Buttons */
+.category-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #1a3c75, #3d5a80);
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+.category-btn:hover {
+    background: linear-gradient(135deg, #224a92, #5078a7);
+    transform: scale(1.05);
+}
+
+.category-btn.active,
+.level-btn.active {
+    background: linear-gradient(135deg, #ff7f50, #ff4500); 
+    color: white;
+    transform: scale(1.08);
+    box-shadow: 0px 0px 10px rgba(255, 69, 0, 0.7);
+    border:2px solid whitesmoke;
+}
+
+/* Right Panel - Game Panel */
+.Game-pannel {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Level Buttons */
+.levels {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.level-btn {
+    padding: 12px 22px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    background: linear-gradient(135deg, #1a3c75, #3d5a80);
+    color: white;
+    transition: transform 0.2s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.level-btn:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+    
+}
+
+#easy {
+    background: #38b000;
+    color: white;
+}
+
+#easy:hover{
+    background-color:#33621d;
+}
+
+#medium {
+    background: #ff8c00;
+    color: white;
+}
+#medium:hover{
+    background-color: #814e0f;
+}
+#hard {
+    background: #d00000;
+    color: white;
+}
+
+#hard:hover{
+    background-color: #6e0e0e;
+}
+
+/* Start Button */
+.start-btn {
+    padding: 14px 30px;
+    font-size: 18px;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    background: #002855;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.start-btn:hover {
+    background: #008bb5;
+    transform: scale(1.08);
+}
+
+/* Responsive Styling */
+
+@media (max-width: 768px) {
+
+    .container {
+        flex-direction: column;
+        width: 90%;
+        height : auto;
+        overflow-x:none;
+        
+    }
+
+    .catergory,
+    .Game-pannel {
+        width: 100%;
+        padding: 15px;
+        
+    }
+    .category-btns{
+        width:60%;
+        justify-content:center;
+        text-align:center;
+        margin:0px auto;
+
+
+    }
+
+    .levels {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 5px;
+    }
+
+    .container {
+        width: 95%;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .catergory,
+    .Game-pannel {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .category-heading h3 {
+        font-size: 18px;
+    }
+
+    .category-btn {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .levels {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .level-btn {
+        width: 90%;
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .start-btn {
+        padding: 10px 15px;
+        font-size: 16px;
+    }
+}
