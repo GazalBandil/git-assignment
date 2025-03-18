@@ -1,0 +1,31 @@
+
+1) Explain the difference between primitive and reference data types with examples.
+ans.  
+
+Feature	                       Primitive Data Type	                              Reference Data Type
+Definition	           Stores actual values directly in memory.	            Stores a reference (memory address) pointing to an object.
+Memory Storage	          Stored in stack memory.	                        Stored in heap memory, while reference is in the stack.
+Mutability	           Immutable (values cannot be changed).	            Mutable (objects can be modified).
+Comparison	                 Compared by value.	                              Compared by reference (memory location).
+Example               Data Types Numbers, characters,                        Arrays, objects, functions, strings (in some languages like Java).
+                   booleans (int, char, float, boolean).	
+
+
+Example:   
+ 
+primitive data type:
+
+int a = 10;
+int b = a;
+b = 20 ; 
+
+System.out.println(a); // Output: 10
+System.out.println(b); // Output: 20
+
+
+2.Reference datatype example;
+
+int[] arr1 = {1, 2, 3};
+int[] arr2 = arr1; // Copying reference and having address of arr1[0], NOT values 
+arr2[0] = 99;
+System.out.println(arr1[0]); // Output: 99
